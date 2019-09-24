@@ -1,0 +1,127 @@
+1. C언어의 특징과 장점을 적으시오.
+C언어는 구조화된 언어이다. C언어는 이식성이 높다. C언어는 확장성이 좋고 표현법이다양해서 자기만의 표현법으로 개발이 가능하다. C언어는 생산성이높다.
+C언어의 장점은 많은곳에 활용이 된다는 것이 장점이다.
+
+2. C언어의 활용에 대해 적으시오.
+임베디드 분야나 하드웨어 쪽에도 활용되고 개발쪽 분야에 쓰인다. C언어는 모듈성을 가지며, 이로인해 구조화 프로그래밍 및 모듈화 설계를 자연스럽게 한다.
+
+3. 두실수를 메모리에 초기화 더하고 화면에 출력하시오.
+#include<stdio.h>
+int main() {
+floata=1.1,b=2.2,c;
+c=a+b;
+frintf("%f",c);
+}
+
+4. 두실수를 키보드로 받고 더해서 화면에 출력하시오.
+#include<stdio.h>
+int main() {
+	float a, b, c;
+	scanf_s("%f%f", &a, &b);
+	c = a + b;
+	printf("%f",c);
+}
+5. 두 실수를 메모리에 저장하고 함수 add()를 활용하여 더한 결과를 리턴 받아 화면에 출력하시오.
+#include<stdio.h>
+int add(int m,intn) {
+return(m+n)
+}
+int main() {
+int a,b,c
+puts("두값을 넣으시오;");
+scanf_s("%d%d",&a,&b);
+c=add(a,b);
+print("%d\n",c);
+}
+
+
+6. my.txt에 33과 22가 들어 있다. 이를 읽고 더하고 결과를 출력하시오.
+#include<stdio.h>
+#include<stdlib.h>
+int add(int a, int b) {
+return a + b;
+}
+int main() {
+int a, b;
+FILE * fp = fopen("my.txt", "r");
+if (fp == NULL) {
+puts("File not found!!");
+exit(0);
+}
+fscanf(fp, "%d%d", &a, &b);
+fclose(fp);
+printf("%d\n", add(a, b));
+}
+
+7. 3개의 과일을 {"Banana","Orange","kiwi"} 초기화하고 화면에 출력하시오.
+#include<stdio.h>
+int main(int argc, char*argv[]) {
+int i;
+for(i=0;i<argc; i++) {
+printf("%S\n",argv[i]);
+}
+}
+/*ex2
+int i;
+const char*c[3]={"Banana","Orange","Kiwi"}
+for(i=0;i<3;i++)
+printf("%s\n",c[i]);
+*/
+/*//ex1
+char c1[7] = "Banaba";
+char c2[7] = "Orange";
+char c3{5} = "kiwi";
+printf("%s\n",c1)
+printf("%s\n",c2)
+printf("%s\n",c3)
+
+8. 곱셈용 명령창 계산기를 구현하시오. 매개변수가 2개 이하면 프로그램이 종료 된다.
+예) mul 10 * 2 결과) 20
+#include<stdio.h>
+#include<stdlib.h>
+int main(int n, char* v[]) {
+ int a, b, c;
+ a = atoi(v[1]);
+ b = atoi(v[3]);
+ switch (v[2][0]) {
+ case '+': c = a + b; break;
+ case '-': c = a - b; break;
+ }
+ printf("%d\n",c);
+ }
+
+9. 두명의 {이름,나이,이메일}을 구조체 배열에 초기화하고 화면에 출력하시오.
+#include<stdio.h>
+struct user {
+char n[80];
+int a;
+char e[80];
+} we[2] = { { "jcshim",18,"abc@anu.ac.kr" },{ "jskim",16,"abc@anu.ac.kr" } };
+int main() {
+printf("%s %d %s\n", we[0].n, we[0].a, we[0].e);
+printf("%s %d %s\n", we[1].n, we[1].a, we[1].e);
+}
+
+10. 두명의 {이름과 나이 그리고 이메일}을 구조체 배열에 초기화하고, 함수 pr()에 포인터 전달하고 화면에 출력하시오.
+#include<stdio.h>
+struct user {
+char n[80];
+int a;
+char e[80];
+} we[2] = { { "jcshim",18,"abc@anu.ac.kr" },{ "jskim",16,"abc@anu.ac.kr" } };
+void pr(struct user* k) {
+printf("%s %d %s\n", k->n, k->a, k->e);
+k++;
+printf("%s %d %s\n", k->n, k->a, k->e);
+}
+int main() {
+pr(we);
+}
+
+소감 : 첫 퀴즈시험을 보았는데 교수님이 내주신 4문제는 교수님방에 찾아가면서 완벽하게 준비를 했다. 그러나 다른 문제들이 너무 버겁고
+생소해서 풀기가 어려웠다. 교수님이 추천해주신 코딩;도장 이사이트에 들어가서 천천히 준비를 하여야겠다. 그리고 주위에 옆분들이 도와주ㅇ
+어서 많이 도움이 되었다. 공부를 해야겠다.
+
+
+
+ 
