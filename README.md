@@ -18,29 +18,36 @@ Ex> 'D'에 접근하려면 'B', 'C'를 거쳐야만 한다.
 2) 단일 연결 리스트
 ![list1](https://user-images.githubusercontent.com/55431033/68275836-0a94f600-00b0-11ea-8a66-db9d222ce763.png)
 -코드 
-typedef struct node
-{
-    struct node* next;
+typedef struct node {
+   
+   struct node* next;
+    
     void* data;
+
 }Node;
 
 3) 이중 연결 리스트
 ![list2](https://user-images.githubusercontent.com/55431033/68275858-0ff24080-00b0-11ea-93bb-98a2df76682b.png)
 -코드
-typedef struct node
-{
+typedef struct node {
+    
     struct node* prev;
+    
     struct node* next;
+    
     void* data;
+
 }Node;
 
 4) 다중 연결 리스트
 ![list3](https://user-images.githubusercontent.com/55431033/68275926-1a143f00-00b0-11ea-860e-9d265b5aa859.png)
 -코드
-typedef struct node
-{
-    vector<struct node *> pointers;
-    void* data;
+typedef struct node {
+    
+   vector<struct node *> pointers;
+   
+   void* data;
+
 }Node;
 
 5) 원형 연결 리스트
