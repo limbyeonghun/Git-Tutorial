@@ -1,6 +1,61 @@
 1.리스트의 종류와 설명
 
+-리스트 코드 (수업시간)
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+typedef struct list {
+
+ int d;
+
+ struct list* p;
+
+} LIST;
+
+LIST* root = NULL;
+
+LIST* last = NULL;
+
+void AddList(int a){
+
+ LIST* r = (LIST*)malloc(sizeof(LIST));
+
+ r->d = a;
+
+ r->p = NULL;
+
+ if(root==NULL) root = r;
+
+ else           last->p = r;
+
+ last = r;
+
+}
+
+int main(void){
+
+ AddList(35);
+
+ AddList(40);
+
+ AddList(45);
+
+ while(root){
+
+  printf("%d\n", root->d);
+
+  root = root->p;
+
+ }
+
+}
+
+
 -리스트의 종류
+
+
 
 1) 연결리스트 : 크기에 대한 제약없어 유연하게 활용할 수 있지만 연결된 메모리가 아니기 때문에 데이터를 찾기 위해서는 모든 노드를 거쳐서 탐색해야 한다.
 ![list0](https://user-images.githubusercontent.com/55431033/68275831-04067e80-00b0-11ea-8f53-0d0d8e9dcd34.png)
