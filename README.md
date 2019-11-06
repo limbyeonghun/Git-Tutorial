@@ -55,6 +55,50 @@ typedef struct node
 트리란?
 
 루트 노드라는 개념을 가지며 이 루트노드로부터 노드들이 이어지면서 트리가 만들어진다. 트리는 반드시 두 개의 노드 사이에 한 경로밖에 존재하지 않기 때문에 하나의 노드는 하나의 노드를 가리킬 수밖에 없다. 이러한 성질 때문에 부모-자식 관계라는 특성 또한 가지는데 A가 B를 가리킬 때 A를 B의 부모노드, B를 A의 자식노드라고 한다. 또한 자식노드가 없는 노드를 리프노드(leaf node)라고 부른다.
+
+트리 코드 (수업시간)
+#include <stdlib.h>               /* malloc */
+typedef struct Tree {
+struct Tr *l, *r;
+int d;
+} T;
+void print(T* p){
+printf("%d\n", p->d);
+
+  if(p->l) print(p->l);
+
+   if(p->r) print(p->r);    
+
+}
+
+T* mem(){
+
+ T* p=(T*)malloc(sizeof(T));
+
+ p->l=p->r=NULL;
+
+ return(p);
+
+}
+
+int main(void){
+
+    T *r, *r1, *r2, *l1;
+
+    l1= (T*)mem(); l1->d=3; 
+
+    r2= (T*)mem(); r2->d=8; 
+
+    r1= (T*)mem(); r1->d=7; r1->r=r2;
+
+    r= (T*)mem(); r->d=5; r->l=l1;  r->r=r1;
+
+    print(r);
+
+}
+
+[출처] 8주 자료구조(리스트, 트리, 그래프) (whatisc) |작성자 머슴
+
  
 - 트리의종류
 
