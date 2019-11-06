@@ -58,14 +58,20 @@ typedef struct node
 
 트리 코드 (수업시간)
 #include <stdlib.h>               /* malloc */
-typedef struct Tree {
-struct Tr *l, *r;
-int d;
-} T;
-void print(T* p){
-printf("%d\n", p->d);
 
-  if(p->l) print(p->l);
+typedef struct Tree {
+
+    struct Tr *l, *r;
+
+    int d;
+
+} T;
+
+void print(T* p){
+
+   printf("%d\n", p->d);
+
+   if(p->l) print(p->l);
 
    if(p->r) print(p->r);    
 
@@ -97,7 +103,10 @@ int main(void){
 
 }
 
-[출처] 8주 자료구조(리스트, 트리, 그래프) (whatisc) |작성자 머슴
+
+
+
+
 
  
 - 트리의종류
