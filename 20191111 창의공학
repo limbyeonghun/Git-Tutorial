@@ -1,4 +1,4 @@
-# 아두이노 코드
+#  1.아두이노코드
 
 #include <Servo.h>
 Servo servoLeft;
