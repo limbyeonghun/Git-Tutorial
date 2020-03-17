@@ -1,0 +1,15 @@
+void setup(){
+  size(500,500);
+  rectMode(CENTER);
+}
+float f;
+void draw(){
+  translate(mouseX, mouseY);
+  rotate(f);
+  scale( sin(f) + 1);
+  f = f+0.05;
+  fill(0,255,0);
+  rect(0,0,80,80);
+  fill(255,0,255);
+  ellipse(0,0,80,80);
+}
