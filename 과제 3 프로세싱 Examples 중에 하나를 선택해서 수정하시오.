@@ -1,0 +1,55 @@
+1.Back To List 
+
+2.void setup() {
+  size(640, 360);
+  noStroke();
+  colorMode(RGB, height, height, height);
+  rectMode(CENTER);
+}
+
+void draw() {
+  background(0.0);
+
+  float r1 = map(mouseX, 0, width, 0, height);
+  float r2 = height-r1;
+  
+  fill(r1);
+  rect(width/2 + r1/2, height/2, r1, r1);
+  
+  fill(r2);
+  rect(width/2 - r2/2, height/2, r2, r2);
+}
+
+3.제가 변형한 내용은 원래 코드는 rectmode를 사용하지만 저는 ellipsemode를 사용했습니다
+배경도 회색깔로 변경을 하였습니다 그리고 양쪽에 원에 색깔도 변경하였습니다 각각 변경을 하였습니다
+
+
+4. 변형한 코드
+void setup() {
+  size(640, 360);
+  noStroke();
+  colorMode(RGB, height, height, height);
+  ellipseMode(CENTER);
+  
+
+}
+
+void draw() {
+  background(127);
+
+
+  float r1 = map(mouseX, 0, width, 0, height);
+  float r2 = height-r1;
+  
+  fill(0,0,255);
+  ellipse(width/2 + r1/2, height/2, r1, r1);
+  
+  
+  fill(0,255,0);
+  ellipse(width/2 - r2/2, height/2, r2, r2);
+}
+
+
+5. 작성소감
+하루빨리 강의실에서 수업을했으면 더욱더 알찼을것이고 교수님덕분에 15개정도의 example을 확인했는데 코드를 수정하면 바뀌는것에 결과물이 바뀌는 것에
+대해서 흥미를 느꼈으며 재밌었던 과제였습니다 !
